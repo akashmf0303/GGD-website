@@ -60,7 +60,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
@@ -78,7 +78,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="animate-scale-in">
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 backdrop-blur-sm shadow-lg">
                 <div className="grid grid-cols-2 gap-8">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="text-center">
@@ -98,7 +98,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-base">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
@@ -113,7 +113,7 @@ const About: React.FC = () => {
             {values.map((value, index) => (
               <div 
                 key={index} 
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center animate-scale-in"
+                className="bg-white/50 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center animate-scale-in"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="p-4 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mb-6">
@@ -132,7 +132,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Expertise */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
@@ -155,7 +155,7 @@ const About: React.FC = () => {
             <div className="animate-scale-in">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-10"></div>
-                <div className="relative bg-white rounded-2xl p-8 shadow-xl">
+                <div className="relative bg-white/50 backdrop-blur-md rounded-2xl p-8 shadow-xl">
                   <h3 className="font-poppins font-bold text-2xl text-dark-neutral mb-4">
                     Ready to Work With Us?
                   </h3>
@@ -190,7 +190,7 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary to-primary">
+      <section className="py-20 bg-gradient-to-r from-secondary/90 to-primary/90 rounded-2xl mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             Let's Build Something Amazing Together

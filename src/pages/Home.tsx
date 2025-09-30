@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-lg rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
@@ -63,7 +63,11 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-base rounded-xl hover:shadow-lg transition-all duration-300 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <div 
+                key={index} 
+                className="flex items-center space-x-4 p-6 bg-white/50 backdrop-blur-md rounded-2xl hover:shadow-lg transition-all duration-300 animate-slide-up"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
                 <div className="p-2 bg-primary/10 rounded-full">
                   <CheckCircle className="h-6 w-6 text-primary" />
                 </div>
@@ -75,7 +79,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Portfolio */}
-      <section className="py-20 bg-base">
+      <section className="py-20 bg-white/30 backdrop-blur-md rounded-2xl mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
@@ -87,7 +91,11 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProjects.map((project, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <div 
+                key={index} 
+                className="bg-white/40 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-poppins font-semibold text-lg text-dark-neutral">{project.name}</h3>
                   <div className="p-2 bg-primary/10 rounded-full">
@@ -120,7 +128,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
+      <section className="py-20 bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md rounded-2xl mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             Ready to Transform Your Digital Presence?
