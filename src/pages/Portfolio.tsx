@@ -35,6 +35,22 @@ const Portfolio: React.FC = () => {
       year: '2023',
       features: ['Community Platform', 'Booking System', 'Member Portal', 'Mobile App']
     },
+    {
+      name: 'White & Guard',
+      url: 'https://www.whiteandguard.com/',
+      description: 'A sophisticated website showcasing premium branding and creative direction for a modern design-first business.',
+      category: 'Creative & Branding',
+      year: '2024',
+      features: ['Premium Design', 'Brand Strategy', 'Interactive Layouts', 'Responsive Experience']
+    },
+    {
+      name: 'Chromatix',
+      url: 'https://www.chromatix.com.au/',
+      description: 'Award-winning web design and development agency with a strong focus on bespoke experiences and client-driven results.',
+      category: 'Agency',
+      year: '2024',
+      features: ['Award-Winning Design', 'Custom Development', 'Client Collaboration', 'High Conversion Focus']
+    }
   ];
 
   return (
@@ -53,13 +69,14 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* ✅ Updated grid line here */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="bg-base rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in"
+                className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in"
                 style={{animationDelay: `${index * 0.2}s`}}
               >
                 <div className="p-8">
@@ -96,7 +113,7 @@ const Portfolio: React.FC = () => {
                       {project.features.map((feature, featureIndex) => (
                         <span
                           key={featureIndex}
-                          className="px-3 py-1 bg-white text-primary text-sm font-inter font-medium rounded-full border border-primary/20"
+                          className="px-3 py-1 bg-white/70 backdrop-blur-sm text-primary text-sm font-inter font-medium rounded-full border border-primary/20"
                         >
                           {feature}
                         </span>
@@ -117,11 +134,23 @@ const Portfolio: React.FC = () => {
               </div>
             ))}
           </div>
+
+          {/* Quick Call Button */}
+          <div className="text-center mt-16">
+            <a
+              href="https://calendly.com/growthgendigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-inter font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200 shadow-lg"
+            >
+              Book a Quick Call
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 bg-base">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
@@ -144,7 +173,11 @@ const Portfolio: React.FC = () => {
               'Learning Management Systems',
               'Custom Web Applications'
             ].map((capability, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <div 
+                key={index} 
+                className="bg-white/50 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-center animate-fade-in"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
                 <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white font-bold">✓</span>
                 </div>
@@ -156,7 +189,7 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Future Projects Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
             Your Project Could Be Next

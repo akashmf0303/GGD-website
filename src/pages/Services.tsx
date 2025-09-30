@@ -76,16 +76,16 @@ const Services: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="bg-base p-8 rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in group"
+                className="bg-white/50 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in group"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                <div className="p-4 bg-gradient-to-r from-primary to-secondary rounded-lg inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-4 bg-gradient-to-r from-primary to-secondary rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-poppins font-semibold text-xl text-dark-neutral mb-4">
@@ -101,7 +101,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-base">
+      <section className="py-20 bg-white/40 backdrop-blur-md rounded-2xl shadow-inner mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-dark-neutral mb-4">
@@ -119,7 +119,11 @@ const Services: React.FC = () => {
               { step: '03', title: 'Development & Testing', description: 'Build your solution using best practices and rigorous quality assurance.' },
               { step: '04', title: 'Launch & Support', description: 'Deploy your project and provide ongoing maintenance and optimization.' },
             ].map((process, index) => (
-              <div key={index} className="text-center animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+              <div 
+                key={index} 
+                className="bg-white/50 backdrop-blur-md rounded-2xl p-6 shadow-md hover:shadow-lg text-center animate-fade-in"
+                style={{animationDelay: `${index * 0.2}s`}}
+              >
                 <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="font-poppins font-bold text-white text-lg">{process.step}</span>
                 </div>
@@ -132,7 +136,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary to-primary">
+      <section className="py-20 bg-gradient-to-r from-secondary/90 to-primary/90 rounded-2xl mx-4 sm:mx-8 lg:mx-16 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             Ready to Start Your Project?

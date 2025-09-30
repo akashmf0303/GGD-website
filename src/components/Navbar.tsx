@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+
+// ✅ Import at the top, not inside JSX
+import logo from "../assets/logo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,30 +14,32 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <img 
-              src="https://raw.githubusercontent.com/akashmf0303/logo/main/logo.png" 
-              alt="Growth Gen Digital Logo" 
-              className="h-10 w-10 rounded-lg group-hover:scale-105 transition-transform"
+            <img
+              src={logo}
+              alt="Growth Gen Digital Logo"
+              className="h-16 w-16 object-contain"
             />
             <span className="font-poppins font-bold text-xl text-dark-neutral">
               Growth Gen <span className="text-primary">Digital</span>
@@ -49,14 +54,16 @@ const Navbar: React.FC = () => {
                 to={item.href}
                 className={`font-inter font-medium transition-colors relative group ${
                   location.pathname === item.href
-                    ? 'text-primary'
-                    : 'text-dark-neutral hover:text-primary'
+                    ? "text-primary"
+                    : "text-dark-neutral hover:text-primary"
                 }`}
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${
-                  location.pathname === item.href ? 'w-full' : ''
-                }`}></span>
+                <span
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${
+                    location.pathname === item.href ? "w-full" : ""
+                  }`}
+                ></span>
               </Link>
             ))}
             <Link
@@ -87,8 +94,8 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-md font-inter font-medium transition-colors ${
                     location.pathname === item.href
-                      ? 'text-primary bg-primary/10'
-                      : 'text-dark-neutral hover:text-primary hover:bg-gray-50'
+                      ? "text-primary bg-primary/10"
+                      : "text-dark-neutral hover:text-primary hover:bg-gray-50"
                   }`}
                 >
                   {item.name}
